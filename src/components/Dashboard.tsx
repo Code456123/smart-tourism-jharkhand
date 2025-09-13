@@ -19,13 +19,10 @@ import {
   Users, 
   MapPin, 
   Award,
-  Calendar,
   DollarSign,
   Leaf,
-  Eye,
   Download
 } from 'lucide-react';
-import { TouristData } from '../types';
 import { touristData } from '../data/mockData';
 
 ChartJS.register(
@@ -46,7 +43,6 @@ interface DashboardProps {
 
 const Dashboard: React.FC<DashboardProps> = ({ onBack }) => {
   const [selectedPeriod, setSelectedPeriod] = useState<'6m' | '1y' | 'all'>('1y');
-  const [selectedMetric, setSelectedMetric] = useState<'visitors' | 'eco-score' | 'revenue'>('visitors');
 
   // Tourist Inflow Chart Data
   const touristInflowData = {

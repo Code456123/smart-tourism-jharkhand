@@ -8,9 +8,7 @@ import {
   ArrowRight, 
   Sparkles,
   Heart,
-  Mountain,
   Compass,
-  Users,
   Home
 } from 'lucide-react';
 import { Mood, Itinerary, ItineraryDay } from '../types';

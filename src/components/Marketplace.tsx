@@ -3,15 +3,12 @@ import {
   ShoppingBag, 
   Star, 
   Award, 
-  Filter, 
   Search, 
   ArrowRight,
   Heart,
   ShoppingCart,
   MapPin,
-  Leaf,
-  Home,
-  Camera
+  Leaf
 } from 'lucide-react';
 import { MarketplaceItem } from '../types';
 import { marketplaceItems } from '../data/mockData';
@@ -21,7 +18,6 @@ interface MarketplaceProps {
 }
 
 const Marketplace: React.FC<MarketplaceProps> = ({ onBack }) => {
-  const [items, setItems] = useState<MarketplaceItem[]>(marketplaceItems);
   const [selectedFilter, setSelectedFilter] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [cart, setCart] = useState<MarketplaceItem[]>([]);
@@ -34,7 +30,7 @@ const Marketplace: React.FC<MarketplaceProps> = ({ onBack }) => {
     { id: 'eco-tour', name: 'Eco Tours', count: marketplaceItems.filter(item => item.type === 'eco-tour').length }
   ];
 
-  const filteredItems = items.filter(item => {
+  const filteredItems = marketplaceItems.filter(item => {
     const matchesFilter = selectedFilter === 'all' || item.type === selectedFilter;
     const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          item.description.toLowerCase().includes(searchTerm.toLowerCase());

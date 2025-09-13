@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   Award, 
   ArrowRight, 
-  Leaf, 
   Trophy, 
   Star, 
-  Target,
-  TrendingUp,
-  Users,
-  Heart,
   Sparkles
 } from 'lucide-react';
 import { Badge, Tourist } from '../types';
@@ -104,24 +99,19 @@ const EcoGamification: React.FC<EcoGamificationProps> = ({ onBack }) => {
 
   const simulateEcoAction = (actionType: string) => {
     let pointsEarned = 0;
-    let actionMessage = '';
 
     switch (actionType) {
       case 'homestay':
         pointsEarned = 25;
-        actionMessage = 'chose eco-friendly homestay';
         break;
       case 'handicraft':
         pointsEarned = 20;
-        actionMessage = 'purchased local handicraft';
         break;
       case 'guide':
         pointsEarned = 15;
-        actionMessage = 'booked verified guide';
         break;
       case 'transport':
         pointsEarned = 30;
-        actionMessage = 'used sustainable transport';
         break;
       default:
         return;

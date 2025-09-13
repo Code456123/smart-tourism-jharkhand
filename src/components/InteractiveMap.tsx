@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { 
   Map as MapIcon, 
   ArrowRight, 
-  Award, 
   Camera, 
   MapPin, 
   Star,
@@ -10,8 +9,7 @@ import {
   Compass,
   Mountain,
   Trees,
-  Building,
-  Waves
+  Building
 } from 'lucide-react';
 import { Destination } from '../types';
 import { destinations } from '../data/mockData';

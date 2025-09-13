@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   Shield, 
   ArrowRight, 
@@ -15,7 +15,7 @@ import {
   XCircle,
   Info
 } from 'lucide-react';
-import { WeatherAlert, CrowdAlert } from '../types';
+import { CrowdAlert } from '../types';
 import { weatherAlerts, crowdAlerts } from '../data/mockData';
 
 interface SafetyAssistantProps {
@@ -25,8 +25,8 @@ interface SafetyAssistantProps {
 const SafetyAssistant: React.FC<SafetyAssistantProps> = ({ onBack }) => {
   const [showSOSModal, setShowSOSModal] = useState(false);
   const [emergencyContacted, setEmergencyContacted] = useState(false);
-  const [userLocation, setUserLocation] = useState<string>('Ranchi, Jharkhand');
-  const [currentWeather, setCurrentWeather] = useState({
+  const [userLocation] = useState<string>('Ranchi, Jharkhand');
+  const [currentWeather] = useState({
     temperature: 28,
     condition: 'Partly Cloudy',
     humidity: 65,
