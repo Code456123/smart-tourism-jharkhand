@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 
 interface LandingPageProps {
-  onNavigate: (page: 'home' | 'itinerary' | 'marketplace' | 'map' | 'eco-score' | 'safety' | 'dashboard' | 'guides' | 'prototype') => void;
+  onNavigate: (page: 'home' | 'itinerary' | 'marketplace' | 'map' | 'eco-score' | 'safety' | 'dashboard' | 'guides') => void;
 }
 
 const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
@@ -200,12 +200,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
             Start your sustainable journey today and earn eco-points while discovering hidden gems
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => onNavigate('prototype')}
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all"
-            >
-              🎨 View Prototype UI
-            </button>
             <button 
               onClick={() => onNavigate('itinerary')}
               className="bg-eco-green-600 hover:bg-eco-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all"

@@ -7,9 +7,8 @@ import EcoGamification from './components/EcoGamification';
 import SafetyAssistant from './components/SafetyAssistant';
 import BlockchainGuides from './components/BlockchainGuides';
 import Dashboard from './components/Dashboard';
-import TourismPrototype from './components/TourismPrototype';
 
-type Page = 'home' | 'itinerary' | 'marketplace' | 'map' | 'eco-score' | 'safety' | 'dashboard' | 'guides' | 'prototype';
+type Page = 'home' | 'itinerary' | 'marketplace' | 'map' | 'eco-score' | 'safety' | 'dashboard' | 'guides';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -20,8 +19,6 @@ function App() {
 
   const renderCurrentPage = () => {
     switch (currentPage) {
-      case 'prototype':
-        return <TourismPrototype />;
       case 'itinerary':
         return <AIItinerary onBack={() => setCurrentPage('home')} />;
       case 'marketplace':
